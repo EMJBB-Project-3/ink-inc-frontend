@@ -44,6 +44,9 @@ export default function Home() {
         <Menu.Item key="4" icon={<BarChartOutlined />}>
           About
         </Menu.Item>
+        <Menu.Item key="4" icon={<BarChartOutlined />}>
+          Login/Signup
+        </Menu.Item>
         
       </Menu>
         </Sider>
