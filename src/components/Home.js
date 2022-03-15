@@ -1,101 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-// import './index.css';
-import { Layout, Menu, Space, Card, Rate } from 'antd';
-import {
-  
-  BarChartOutlined,
-  UserOutlined,
-  UploadOutlined,
-  PushpinOutlined
-} from '@ant-design/icons';
+import { Layout, Menu, Breadcrumb } from 'antd';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Footer } = Layout;
 
 export default function Home() {
-    return(
-        
-
-    ReactDOM.render(
-        <Layout hasSider>
-        <Sider
-            style={{
-            overflow: 'auto',
-            height: '100vh',
-            position: 'fixed',
-            left: 0,
-            top: 0,
-            bottom: 0,
-            }}
-        >
-        
+  return (
+    <Layout>
+    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="logo" />
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-        <Menu.Item key="1" icon={<UserOutlined />}>
-          Home
-        </Menu.Item>
-        <Menu.Item key="2" icon={<PushpinOutlined />}>
-          Post
-        </Menu.Item>
-        <Menu.Item key="3" icon={<UploadOutlined />}>
-          Profile
-        </Menu.Item>
-        <Menu.Item key="4" icon={<BarChartOutlined />}>
-          About
-        </Menu.Item>
-        <Menu.Item key="4" icon={<BarChartOutlined />}>
-          Login/Signup
-        </Menu.Item>
-        
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+        <Menu.Item key="1">nav 1</Menu.Item>
+        <Menu.Item key="2">nav 2</Menu.Item>
+        <Menu.Item key="3">nav 3</Menu.Item>
       </Menu>
-        </Sider>
-        <Layout className="site-layout" style={{ marginLeft: 200 }}>
-        <Header className="site-layout-background" style={{ padding: 0 }} />
-        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-        <div className="site-layout-background" style={{ padding: 24, textAlign: 'center' }}>
-        <Space direction="horizontal">
-        
-        <Card title="Card" style={{ width: 300 }}>
-            <p>Card content</p>
-            <p>Card content</p>
-        </Card>
-
-        <Card title="Card" style={{ width: 300 }}>
-            <p>hi</p>
-            <p>Card content</p>
-        </Card>
-
-        <Card title="Card" style={{ width: 300 }}>
-            <p>Card content</p>
-            <p>Card content</p>
-        </Card>
-        </Space>
-
-        <Space direction="horizontal">
-        <Card title="Card" style={{ width: 300 }}>
-            <p>Card content</p>
-            <p>Card content</p>
-        </Card>
-
-        <Card title="Card" style={{ width: 300 }}>
-            <p>Card content</p>
-            <p>Card content</p>
-        </Card>
-
-        <Card title="Card" style={{ width: 300 }}>
-            <p>Card content</p>
-            <p>Card content</p>
-        </Card>
-        </Space>
-        </div>
-      </Content>
-
-      <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Styled By EMJBB</Footer>
-        </Layout>
-        </Layout>,
-        document.getElementById('container'),
-        )
-    )
+    </Header>
+    <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+      <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+      <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+        Content
+      </div>
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+  </Layout>
+  )
 }
-
+  
