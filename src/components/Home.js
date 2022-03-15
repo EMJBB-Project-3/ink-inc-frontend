@@ -1,3 +1,4 @@
+import PostCard from "./PostCard.js"
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
 
@@ -21,7 +22,10 @@ export default function Home() {
         <Breadcrumb.Item>App</Breadcrumb.Item>
       </Breadcrumb>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-        Content
+        <PostCard 
+        username={"username here"}
+        text={"text"}
+        />
       </div>
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
