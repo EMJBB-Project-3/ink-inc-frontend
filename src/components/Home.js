@@ -2,9 +2,24 @@ import PostCard from "./PostCard.js"
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
 
+
+import { useQuery } from '@apollo/client';
+import { QUERY_USERS } from '../utils/queries';
+
+
+
+
+
 const { Header, Content, Footer } = Layout;
 
 export default function Home() {
+
+
+  const { loading, data } = useQuery(QUERY_USERS);
+  console.log(data)
+
+
+
   return (
     <Layout>
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>

@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
@@ -15,7 +16,8 @@ const client = new ApolloClient({
 function App() {
   return (
     
-      <ApolloProvider>
+      <ApolloProvider client={client}>
+      <Router>
         <>
           
           <Routes>
@@ -33,9 +35,9 @@ function App() {
             />
           </Routes>
         </>
+      
+      </Router>
       </ApolloProvider>
-    
-
   );
 }
 
