@@ -1,12 +1,11 @@
-import PostCard from "./PostCard.js"
+// import PostCard from "./PostCard.js"
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
-
+import PostList from './PostList'
+// // import { QUERY_USERS } from '../utils/queries';
 
 import { useQuery } from '@apollo/client';
-import { QUERY_USERS } from '../utils/queries';
-
-
+import { QUERY_POSTS } from '../utils/queries';
 
 
 
@@ -14,11 +13,10 @@ const { Header, Content, Footer } = Layout;
 
 export default function Home() {
 
-
-  const { loading, data } = useQuery(QUERY_USERS);
-  console.log(data)
-
-
+  const {data}  = useQuery(QUERY_POSTS);
+  // console.log(data)
+  // console.log(typeof data)
+  
 
   return (
     <Layout>
@@ -39,12 +37,12 @@ export default function Home() {
         <Breadcrumb.Item>Login</Breadcrumb.Item>
       </Breadcrumb>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-        <PostCard 
+        {/* <PostCard 
         username={"username here"}
         text={"text"}
-        />
+        /> */}
       </div>
-      
+      <PostList data={data}/>
     </Content>
     <Footer style={{ textAlign: 'center' }}>©2022 Styled by EMJBB</Footer>
   </Layout>

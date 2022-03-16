@@ -6,8 +6,9 @@ import { Input } from 'antd';
 
 const { TextArea } = Input;
 
-export default function PostCard({ username, text }) {
-
+// export default function PostCard({ username, text }) {
+export default function PostCard({username}) {
+    // console.log(post)
     return (
         <>
             <Card
@@ -16,7 +17,8 @@ export default function PostCard({ username, text }) {
             // cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
             >
                 <div>
-                    <h3>{username}</h3>
+                    <h1>{username}</h1>
+                    <h1></h1>
                 </div>
                 <img
                     src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
@@ -24,7 +26,7 @@ export default function PostCard({ username, text }) {
                 >
                 </img>
                 <div>
-                    <p>{text}</p>
+                    
                 </div>
 
                 <div>
@@ -35,8 +37,8 @@ export default function PostCard({ username, text }) {
 
                 {/* <Meta title="Europe Street beat" description="www.instagram.com" /> */}
             </Card>
-
-            <TextArea rows={4} placeholder="maxLength is 120" maxLength={120} />
+{/* 
+            <TextArea rows={4} placeholder="maxLength is 120" maxLength={120} /> */}
         </>
     )
 }
