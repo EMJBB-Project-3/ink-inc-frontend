@@ -1,8 +1,8 @@
 import * as firebase from 'firebase/app';
 import 'firebase/storage';
-import 'firebase/firestone';
+import 'firebase/firestore';
 
-// web app's firebase config
+// firebase config
 const firebaseConfig = {
     apiKey: process.env.apiKey,
     authDomain: process.env.authDomain,
@@ -16,6 +16,6 @@ const firebaseConfig = {
 // initialize firebase
 firebase.initializeApp(firebaseConfig);
 const projectStorage = firebase.storage();
-const projectFirestone = firebase.firestore();
-
-export { projectStorage, projectFirestone };
+const projectFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;//timestamp data
+export { projectStorage, projectFirestore, timestamp };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ProgressBar from './ProgressBar';
 
 // component
 const UploadForm = () => {
@@ -6,6 +7,7 @@ const UploadForm = () => {
     const [error, setError] = useState(null);
     // an array of allowed file types
     const types = ['image/png', 'image/jpeg'];
+    
     // change event
     const changeHandler = (e) => {
         // access file user has selected
@@ -26,6 +28,8 @@ const UploadForm = () => {
             {/* will display error msg if it exists */}
             <div className='ouput'>
                 {error && <div className='error'>{error}</div>}
+                {/* inserts progress bar only when file selected */}
+                {file && <ProgressBar file={file} setFile={setFile} />}
             </div>
         </form>
     )
