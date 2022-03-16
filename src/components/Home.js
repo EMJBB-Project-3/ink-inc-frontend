@@ -9,11 +9,11 @@ export default function Home() {
     <Layout>
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['3']}>
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
         <Menu.Item key="1">Home</Menu.Item>
         <Menu.Item key="2">Post</Menu.Item>
         <Menu.Item key="3">Profile</Menu.Item>
-        <Menu.Item key="4">About</Menu.Item>
+        <Menu.Item key="4">Login</Menu.Item>
       </Menu>
     </Header>
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
