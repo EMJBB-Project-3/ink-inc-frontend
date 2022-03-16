@@ -8,3 +8,16 @@ export const QUERY_USERS = gql`
     }
   }
 `;
+
+export const QUERY_POSTS = gql`
+query allPosts {
+  allPosts {
+    username
+    text
+    artist
+    createdOn
+    favorites
+  }
+}
+`;
+
