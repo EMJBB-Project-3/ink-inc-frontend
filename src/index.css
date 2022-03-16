@@ -30,3 +30,9 @@
   [data-theme="dark"] .site-layout-content {
     background: #141414;
   }
+
+.progress-bar{
+  height: 5px;
+  background: black;
+  margin-top: 20px;
+}  
