@@ -2,12 +2,8 @@ import LikeButton from './LikeButton'
 import { Card } from 'antd';
 import React from 'react';
 import 'antd/dist/antd.css';
-// import './index.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
 import { Input } from 'antd';
-// const { Meta } = Card;
 
-const { Header, Content, Footer } = Layout;
 const { TextArea } = Input;
 
 export default function PostCard({ username, text }) {

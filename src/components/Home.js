@@ -12,7 +12,7 @@ export default function Home() {
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
         <Menu.Item key="1">Home</Menu.Item>
         <Menu.Item key="2">Post</Menu.Item>
-        <Menu.Item key="3">Profile</Menu.Item>
+        <Menu.Item key="3">My Profile</Menu.Item>
         <Menu.Item key="4">Login</Menu.Item>
       </Menu>
     </Header>
@@ -20,8 +20,8 @@ export default function Home() {
       <Breadcrumb style={{ margin: '16px 0' }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>Post</Breadcrumb.Item>
-        <Breadcrumb.Item>Profile</Breadcrumb.Item>
-        <Breadcrumb.Item>About</Breadcrumb.Item>
+        <Breadcrumb.Item>My Profile</Breadcrumb.Item>
+        <Breadcrumb.Item>Login</Breadcrumb.Item>
       </Breadcrumb>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         <PostCard 
@@ -30,7 +30,7 @@ export default function Home() {
         />
       </div>
     </Content>
-    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+    <Footer style={{ textAlign: 'center' }}>©2022 Styled by EMJBB</Footer>
   </Layout>
   )
 }
