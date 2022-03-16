@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './components/Home'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -12,11 +13,11 @@ function App() {
               path='/' 
               element={<Home />} 
             />
-            {/* <Route 
-              path='/saved' 
-              element={<SavedBooks />} 
-            />
             <Route 
+              path='./components/Profile' 
+              element={<Profile />} 
+            />
+            {/* <Route 
               path='*'
               element={<h1 className='display-2'>Wrong page!</h1>}
             /> */}
