@@ -5,16 +5,19 @@ import PostCard from "./PostCard.js"
 
 
 
-export default function PostList(data) {
+export default function PostList(allPosts) {
     // console.log(data)
     // console.log(data.data.allPosts)
-    const postArray = data.data.allPosts
+    // const postArray = data.data.allPosts
     // console.log(postArray)
 
+    console.log(allPosts.allPosts)
+    const postArray = allPosts.allPosts
+    console.log(postArray)
+
     return (
-        // <h1>hi</h1>
-        // <div>
-        //     {postArray.map(post => {
+
+        // {postArray.map(post => {
         //         console.log(post)
         //     })}
         //     <h1>hi</h1>
@@ -28,11 +31,14 @@ export default function PostList(data) {
         // </div>
 
         <div>
+        {/* <h1>hi</h1> */}
+
             {postArray.map((post, index )=> {
                 return <PostCard key={index}post={post}/>
             }
                 )}
         </div>
+  
 
 
     )

@@ -6,6 +6,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Home from './components/Home'
 import MyProfile from './components/MyProfile'
 import Post from './components/Post'
+import Login from './components/Login'
 
 
 const client = new ApolloClient({
@@ -32,6 +33,10 @@ function App() {
             <Route 
               path='./components/Post'
               element={<Post />}
+            />
+            <Route 
+              path='./components/Login'
+              element={<Login/>}
             />
           </Routes>
         </>

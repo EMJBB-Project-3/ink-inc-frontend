@@ -1,15 +1,13 @@
 import LikeButton from './LikeButton'
-import { Card } from 'antd';
-import React from 'react';
 import 'antd/dist/antd.css';
 import { Input } from 'antd';
-
-const { TextArea } = Input;
+import { Card } from 'antd';
+// const { TextArea } = Input;
 
 // export default function PostCard({ username, text }) {
 export default function PostCard(post) {
     // console.log(post)
-    const {_id, username, text, artist, createdOn, favorites} = post.post
+    const {_id, username, text, favorites} = post.post
     // console.log(_id)
     return (
         <>
@@ -33,6 +31,7 @@ export default function PostCard(post) {
 
                 <div>
                     <LikeButton _id={_id} username={username}/>
+                    <p>{favorites}</p>
                 </div>
 
 
