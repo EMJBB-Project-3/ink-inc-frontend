@@ -9,8 +9,8 @@ const { TextArea } = Input;
 // export default function PostCard({ username, text }) {
 export default function PostCard(post) {
     // console.log(post)
-    const {username, text, artist, createdOn, favorites} = post.post
-    // console.log(username)
+    const {_id, username, text, artist, createdOn, favorites} = post.post
+    // console.log(_id)
     return (
         <>
             <Card
@@ -26,12 +26,13 @@ export default function PostCard(post) {
                     style={{ height: 100 }}
                 >
                 </img>
+
                 <div>
                     <p>{text}</p>
                 </div>
 
                 <div>
-                    <LikeButton />
+                    <LikeButton _id={_id} username={username}/>
                 </div>
 
 

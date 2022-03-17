@@ -9,7 +9,7 @@ export default function PostList(data) {
     // console.log(data)
     // console.log(data.data.allPosts)
     const postArray = data.data.allPosts
-    console.log(postArray)
+    // console.log(postArray)
 
     return (
         // <h1>hi</h1>

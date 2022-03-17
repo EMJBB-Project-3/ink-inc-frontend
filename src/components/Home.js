@@ -16,7 +16,6 @@ export default function Home() {
   const {data}  = useQuery(QUERY_POSTS);
   // console.log(data)
   // console.log(typeof data)
-  
 
   return (
     <Layout>
