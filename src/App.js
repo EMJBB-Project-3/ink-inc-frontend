@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Home from './components/Home'
-import MyProfile from './components/MyProfile'
-import Post from './components/Post'
+import Home from './components/Home';
+import MyProfile from './components/MyProfile';
+import Post from './components/Post';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+
 
 function App() {
   return (
@@ -10,18 +13,17 @@ function App() {
         <>
           
           <Routes>
-            <Route 
-              path='/' 
-              element={<Home />} 
-            />
-            <Route 
-              path='./components/MyProfile' 
-              element={<MyProfile />} 
-            />
-            <Route 
-              path='./components/Post'
-              element={<Post />}
-            />
+            <Route path='/' element={<Home />} />
+            
+            <Route path='/MyProfile' element={<MyProfile />} />
+               
+            <Route path='/Post' element={<Post />} />
+
+            <Route path='/SignUp' element={<SignUp />} />
+
+            <Route path='/Login' element={<Login />} />
+
+
           </Routes>
         </>
       </Router>
@@ -31,3 +33,8 @@ function App() {
 }
 
 export default App;
+            
+              
+              
+            
+          
