@@ -12,6 +12,7 @@ export const QUERY_USERS = gql`
 export const QUERY_POSTS = gql`
 query allPosts {
   allPosts {
+    _id
     username
     text
     artist

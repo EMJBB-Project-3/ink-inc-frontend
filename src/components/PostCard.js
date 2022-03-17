@@ -7,8 +7,10 @@ import { Input } from 'antd';
 const { TextArea } = Input;
 
 // export default function PostCard({ username, text }) {
-export default function PostCard({username}) {
+export default function PostCard(post) {
     // console.log(post)
+    const {_id, username, text, artist, createdOn, favorites} = post.post
+    // console.log(_id)
     return (
         <>
             <Card
@@ -17,20 +19,20 @@ export default function PostCard({username}) {
             // cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
             >
                 <div>
-                    <h1>{username}</h1>
-                    <h1></h1>
+                <h3>{username}</h3>
                 </div>
                 <img
                     src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
                     style={{ height: 100 }}
                 >
                 </img>
+
                 <div>
-                    
+                    <p>{text}</p>
                 </div>
 
                 <div>
-                    <LikeButton />
+                    <LikeButton _id={_id} username={username}/>
                 </div>
 
 
