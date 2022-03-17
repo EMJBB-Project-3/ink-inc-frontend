@@ -38,14 +38,7 @@ export default function Home() {
         {/* <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         </div> */}
 
-        <Login
-        // username={username}
-        // password={password}
-        // newUsername={newUsername}
-        // newPassword={newPassword}
-        // confirmPassword={confirmPassword}
-        />
-
+        <Login/>
 
         {loading? (<h1>loading...</h1>) 
          :
