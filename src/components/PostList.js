@@ -6,29 +6,12 @@ import PostCard from "./PostCard.js"
 
 
 export default function PostList(allPosts) {
-    // console.log(data)
-    // console.log(data.data.allPosts)
-    // const postArray = data.data.allPosts
+   
+    // console.log(allPosts.allPosts)
+    const postArray = allPosts.allPosts
     // console.log(postArray)
 
-    console.log(allPosts.allPosts)
-    const postArray = allPosts.allPosts
-    console.log(postArray)
-
     return (
-
-        // {postArray.map(post => {
-        //         console.log(post)
-        //     })}
-        //     <h1>hi</h1>
-        // </div>
-    
-        // <div>
-        //     {postArray.map(post => {
-        //         return <h1>{post.username}</h1>
-        //     }
-        //         )}
-        // </div>
 
         <div>
         {/* <h1>hi</h1> */}

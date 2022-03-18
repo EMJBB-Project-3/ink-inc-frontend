@@ -38,12 +38,12 @@ export default function Home() {
         {/* <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         </div> */}
 
-        <Login/>
+        {/* <Login/> */}
 
         {loading? (<h1>loading...</h1>) 
          :
         (<PostList allPosts={allPosts}/>)}
-        {/* <PostList/> */}
+      
         
       </Content>
       <Footer style={{ textAlign: 'center' }}>©2022 Styled by EMJBB</Footer>
