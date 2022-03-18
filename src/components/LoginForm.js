@@ -6,12 +6,14 @@ import Auth from '../utils/auth'
 
 
 const Login = (props) => {
+    //use state to update the values of email and password as the user types 
     const [formState, setFormState] = useState({ email: '', password: '' });
+    
     const [login, { error, data }] = useMutation(LOGIN_USER);
   
+    //use state to update the values of email and password as the user types
     const handleChange = (event) => {
       const { name, value } = event.target;
-  
       setFormState({
         ...formState,
         [name]: value,
@@ -22,11 +24,11 @@ const Login = (props) => {
     const handleFormSubmit = async (event) => {
       event.preventDefault();
       console.log(formState);
-      try {
+      try {  
         const { data } = await login({
           variables: { ...formState },
         });
-  
+        //pass the token to the login function in Auth.js
         Auth.login(data.login.token);
       } catch (e) {
         console.error(e);
@@ -43,7 +45,7 @@ const Login = (props) => {
       <main className="flex-row justify-center mb-4">
         <div className="col-12 col-lg-10">
           <div className="card">
-            <h4 className="card-header bg-dark text-light p-2">Login</h4>
+            {/* <h4 className="card-header bg-dark text-light p-2">Login</h4> */}
             <div className="card-body">
               {data ? (
                 <p>
@@ -53,7 +55,7 @@ const Login = (props) => {
                 <form onSubmit={handleFormSubmit}>
                   <input
                     className="form-input"
-                    placeholder="Your email"
+                    placeholder="Email"
                     name="email"
                     type="email"
                     value={formState.email}
@@ -68,8 +70,8 @@ const Login = (props) => {
                     onChange={handleChange}
                   />
                   <button
-                    className="btn btn-block btn-info"
-                    style={{ cursor: 'pointer' }}
+                    // className="btn btn-block btn-info"
+                    // style={{ cursor: 'pointer' }}
                     type="submit"
                   >
                     Submit
