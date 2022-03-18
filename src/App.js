@@ -27,15 +27,15 @@ function App() {
               element={<Home />} 
             />
             <Route 
-              path='./components/MyProfile' 
+              path='/MyProfile' 
               element={<MyProfile />} 
             />
             <Route 
-              path='./components/Post'
+              path='/Post'
               element={<Post />}
             />
             <Route 
-              path='./components/Login'
+              path='/Login'
               element={<Login/>}
             />
           </Routes>
