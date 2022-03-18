@@ -1,73 +1,93 @@
-import React, { useState } from 'react';
-import LoginForm from './LoginForm'
-import NewUserForm from './NewUserForm'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useMutation } from '@apollo/client'
+import { LOGIN_USER } from '../utils/mutation'
+
+import Auth from '../utils/auth'
 
 
-export default function Login() {
-
-    const [username, setUsername] = useState("")
-    const handleChangeUsername = (event) => {
-        // console.log('name = ', event.target.value)
-        setUsername(event.target.value)
-        console.log(username)
-    }
-    const [password, setPassword] = useState("")
-    const handleChangePassword = (event) => {
-        setPassword(event.target.value)
-        console.log(password)
-    }
-
-
-
-    const [newUsername, setNewUsername] = useState("")
-    const handleChangeNewUsername = (event) => {
-        // console.log('name = ', event.target.value)
-        setNewUsername(event.target.value)
-        console.log(newUsername)
-    }
-    const [newPassword, setNewPassword] = useState("")
-    const handleChangeNewPassword = (event) => {
-        setNewPassword(event.target.value)
-        console.log(newPassword)
-    }
-    const [confirmPassword, setConfirmPassword] = useState("")
-    const handleChangeConfirmPassword = (event) => {
-        setConfirmPassword(event.target.value)
-        console.log(confirmPassword)
-    }
-
-
-
+const Login = (props) => {
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [login, { error, data }] = useMutation(LOGIN_USER);
+  
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...formState,
+        [name]: value,
+      });
+    };
+  
+    // submit form
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      console.log(formState);
+      try {
+        const { data } = await login({
+          variables: { ...formState },
+        });
+  
+        Auth.login(data.login.token);
+      } catch (e) {
+        console.error(e);
+      }
+  
+      // clear form values
+      setFormState({
+        email: '',
+        password: '',
+      });
+    };
+  
     return (
-        <div>
-            <div>
-                <h2>Log In</h2>
-                <div>
-                    <LoginForm
-                        username={username}
-                        handleChangeUsername={handleChangeUsername}
-                        password={password}
-                        handleChangePassword={handleChangePassword}
-                    />
+      <main className="flex-row justify-center mb-4">
+        <div className="col-12 col-lg-10">
+          <div className="card">
+            <h4 className="card-header bg-dark text-light p-2">Login</h4>
+            <div className="card-body">
+              {data ? (
+                <p>
+                  <Link to="/">back to the homepage.</Link>
+                </p>
+              ) : (
+                <form onSubmit={handleFormSubmit}>
+                  <input
+                    className="form-input"
+                    placeholder="Your email"
+                    name="email"
+                    type="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="******"
+                    name="password"
+                    type="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                  <button
+                    className="btn btn-block btn-info"
+                    style={{ cursor: 'pointer' }}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </form>
+              )}
+  
+              {error && (
+                <div className="my-3 p-3 bg-danger text-white">
+                  {error.message}
                 </div>
+              )}
             </div>
-
-            <h2>Create an Account</h2>
-
-            <div>
-                <NewUserForm
-                    newUsername={newUsername}
-                    handleChangeNewUsername={handleChangeNewUsername}
-                    newPassword={newPassword}
-                    handleChangeNewPassword={handleChangeNewPassword}
-                    confirmPassword={confirmPassword}
-                    handleChangeConfirmPassword={handleChangeConfirmPassword}
-                />
-            </div>
-
+          </div>
         </div>
-
-
-    )
-
-}
+      </main>
+    );
+  };
+  
+  export default Login;
