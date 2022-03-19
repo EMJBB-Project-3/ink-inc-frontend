@@ -28,17 +28,17 @@ export default function Login() {
                                 hoverable
                                 style={{ width: 540, margin:50 }}
                             >
-                                 <div>
                                 <div>
-                                    <h2>Log in</h2>
-                                    <LoginForm />
-                                </div>
-                                <div>
+                                    <div>
+                                        <h2>Log in</h2>
+                                        <LoginForm />
+                                    </div>
+                                    <div>
                                     <h2>Sign Up</h2>
                                     <SignUp />
-                                </div>
+                                    </div>
 
-                            </div>
+                                </div>
                                 <Meta title="Login/SignUp" description="www.ink-inc.global" />
                             </Card>
                         </Col>
@@ -46,10 +46,6 @@ export default function Login() {
 
                     </Row>
                 </div>
-
-                {/* <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-        Content
-      </div> */}
 
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>

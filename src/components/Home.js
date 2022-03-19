@@ -29,10 +29,7 @@ export default function Home() {
           <Menu.Item key="3"><NavLink to='/myprofile'>My Profile</NavLink></Menu.Item>
           <Menu.Item key="4"><NavLink to='/login'>Login</NavLink></Menu.Item>
         </Menu>
-        {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-         <NavLink to='/login'>Login</NavLink>
-         <NavLink to='/post'>Post</NavLink>
-        </Menu> */}
+        
       </Header>
       <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
 
