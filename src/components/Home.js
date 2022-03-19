@@ -1,11 +1,9 @@
 import 'antd/dist/antd.css';
+import '../styles/Home.css';
 import { Layout, Menu} from 'antd';
 import PostList from './PostList'
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
-import Login from './Login';
-import Signup from './SignUp';
-import MyProfile from './MyProfile'
 import { NavLink } from 'react-router-dom';
 
 
@@ -31,7 +29,7 @@ export default function Home() {
         </Menu>
         
       </Header>
-      <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+      <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
 
         {loading? (<h1>loading...</h1>) 
          :

@@ -17,6 +17,12 @@ nav {
     justify-content: space-around;
 }
 
+.site-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 /* .logo {
     margin-left: 1rem;
 }
