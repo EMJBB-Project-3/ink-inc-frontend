@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Layout, Menu, Breadcrumb, Card,} from 'antd';
+import { Layout, Menu, Breadcrumb, Card, Col, Row } from 'antd';
 
 
 export default function MyProfile() {

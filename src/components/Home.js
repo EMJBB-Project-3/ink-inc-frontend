@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import Login from './Login';
 import Signup from './SignUp';
+import MyProfile from './MyProfile'
 import { NavLink } from 'react-router-dom';
 
 
@@ -30,6 +31,7 @@ export default function Home() {
         </Menu> */}
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
          <NavLink to='/login'>Login</NavLink>
+         {/* <NavLink to='/MyProfile'>My Profile</NavLink> */}
         </Menu>
       </Header>
       <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
