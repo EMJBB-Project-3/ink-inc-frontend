@@ -29,30 +29,40 @@ export default function MyProfile() {
         <Breadcrumb.Item>My Profile</Breadcrumb.Item>
         <Breadcrumb.Item>Login</Breadcrumb.Item>
       </Breadcrumb>
-    <h1>Tatlover 69 Favorite Pic</h1>
+      <div className="site-card-wrapper">
+    <Row gutter={16}>
+      <Col span={8}>
+      <h2>Tatlover69 favorite pic!</h2>
       <Card
-    hoverable
-    style={{ width: 120 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-  <h1>Tatlover 69 Favorite Pic</h1>
-  <Card
-    hoverable
-    style={{ width: 120 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-  <h1>Tatlover 69 Favorite Pic</h1>
-  <Card
-    hoverable
-    style={{ width: 120 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
+        hoverable
+        style={{ width: 240 }}
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+      >
+      <Meta title="Europe Street beat" description="www.instagram.com" />
+    </Card>
+      </Col>
+      <Col span={8}>
+      <h2>Tatlover69 favorite pic!</h2>
+      <Card
+        hoverable
+        style={{ width: 240 }}
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+      >
+      <Meta title="Europe Street beat" description="www.instagram.com" />
+    </Card>
+      </Col>
+      <Col span={8}>
+      <h2>Tatlover69 favorite pic!</h2>
+      <Card
+        hoverable
+        style={{ width: 240 }}
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+      >
+      <Meta title="Europe Street beat" description="www.instagram.com" />
+    </Card>
+      </Col>
+    </Row>
+  </div>
       
       {/* <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         Content
