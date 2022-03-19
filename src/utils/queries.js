@@ -30,3 +30,17 @@ query user($userId:ID!) {
   }
 }
 `
+
+export const QUERY_USER_POSTS = gql`
+query userPosts($username:String!) {
+  userPosts(username:$username) {
+    _id
+    username
+    text
+    artist
+    createdOn
+    favorites
+  }
+}
+
+`

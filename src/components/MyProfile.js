@@ -1,12 +1,26 @@
 import 'antd/dist/antd.css';
 import { NavLink } from 'react-router-dom';
 import { Layout, Menu, Card, Col, Row } from 'antd';
+import Auth from '../utils/auth'
+import UserPosts from './UserPosts';
 
+import { useQuery } from '@apollo/client';
+import { QUERY_USER_POSTS } from '../utils/queries';
 
 export default function MyProfile() {
 
     const { Header, Content, Footer } = Layout;
     const { Meta } = Card;
+
+
+  const currentUsername = Auth.getUser().data.username || [];
+  console.log(currentUsername)
+
+  const { loading, data } = useQuery(QUERY_USER_POSTS, {
+    variables: {username:currentUsername}
+  });
+  const userPosts = data.userPosts|| [];
+  console.log(userPosts)
 
 
   return (
@@ -22,7 +36,16 @@ export default function MyProfile() {
     </Header>
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       
-      <div className="site-card-wrapper">
+
+
+
+    <UserPosts></UserPosts>
+
+
+
+
+
+      {/* <div className="site-card-wrapper">
     <Row gutter={16}>
       <Col span={8}>
       <h2>Tatlover69 favorite pic!</h2>
@@ -55,11 +78,11 @@ export default function MyProfile() {
     </Card>
       </Col>
     </Row>
-  </div>
+  </div> */}
       
-      {/* <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+      <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         Content
-      </div> */}
+      </div>
       
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>

@@ -18,9 +18,10 @@ export default function Home() {
   const allPosts = data?.allPosts || [];
   
 
-  const currentUserID = Auth.getUser().data._id
-  // console.log(currentUserID)
-  // console.log(Auth.getUser().data)
+  const currentUsername= Auth.getUser().data.username || [];
+  console.log(currentUsername)
+  
+
   
   return (
     <Layout>
@@ -35,9 +36,7 @@ export default function Home() {
         
       </Header>
       <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
-
-      <Welcome currentUserID={currentUserID}/>
-
+      <Welcome currentUsername={currentUsername}></Welcome>
         {loading? (<h1>loading...</h1>) 
          :
         (<PostList allPosts={allPosts}/>)}
