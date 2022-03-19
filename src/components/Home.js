@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import Login from './Login';
 import Signup from './SignUp';
+import MyProfile from './MyProfile'
 import { NavLink } from 'react-router-dom';
 
 
