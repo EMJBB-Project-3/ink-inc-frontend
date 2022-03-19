@@ -2,10 +2,12 @@ import 'antd/dist/antd.css';
 import '../styles/Home.css';
 import { Layout, Menu} from 'antd';
 import PostList from './PostList'
+import Welcome from './Welcome'
 import { useQuery } from '@apollo/client';
-import { QUERY_POSTS } from '../utils/queries';
+import { QUERY_POSTS, QUERY_ONE_USER } from '../utils/queries';
 import { NavLink } from 'react-router-dom';
-
+import { getSuggestedQuery } from '@testing-library/react';
+import Auth from '../utils/auth'
 
 
 const { Header, Content, Footer } = Layout;
@@ -13,10 +15,13 @@ const { Header, Content, Footer } = Layout;
 export default function Home() {
 
   const { loading, data } = useQuery(QUERY_POSTS);
-  // console.log(loading)
   const allPosts = data?.allPosts || [];
-  // console.log(allPosts)
+  
 
+  const currentUserID = Auth.getUser().data._id
+  // console.log(currentUserID)
+  // console.log(Auth.getUser().data)
+  
   return (
     <Layout>
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
@@ -30,6 +35,8 @@ export default function Home() {
         
       </Header>
       <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
+
+      <Welcome currentUserID={currentUserID}/>
 
         {loading? (<h1>loading...</h1>) 
          :

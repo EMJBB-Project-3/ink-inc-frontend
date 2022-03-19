@@ -22,3 +22,11 @@ query allPosts {
 }
 `;
 
+
+export const QUERY_ONE_USER = gql`
+query user($userId:ID!) {
+  user(userId:$userId) {
+    username
+  }
+}
+`
