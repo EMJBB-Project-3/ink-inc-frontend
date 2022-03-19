@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Layout, Menu, Card, Col, Row } from 'antd';
 import Auth from '../utils/auth'
 import UserPosts from './UserPosts';
+import PostList from './PostList';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_USER_POSTS } from '../utils/queries';
@@ -19,7 +20,8 @@ export default function MyProfile() {
   const { loading, data } = useQuery(QUERY_USER_POSTS, {
     variables: {username:currentUsername}
   });
-  const userPosts = data.userPosts|| [];
+  console.log(data)
+  const userPosts = data?.userPosts|| [];
   console.log(userPosts)
 
 
@@ -36,10 +38,12 @@ export default function MyProfile() {
     </Header>
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       
+    {/* {loading? (<h1>loading...</h1>) 
+         :
+        (<PostList/>)} */}
 
 
-
-    <UserPosts></UserPosts>
+    <UserPosts userPosts={userPosts}></UserPosts>
 
 
 
