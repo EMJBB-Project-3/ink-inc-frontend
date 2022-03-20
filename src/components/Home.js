@@ -30,7 +30,7 @@ export default function Home() {
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1"><NavLink to='/home'>Home</NavLink></Menu.Item>
-          <Menu.Item key="2"><NavLink to='/post'>Post</NavLink></Menu.Item>
+          <Menu.Item key="2"><NavLink to='/createpost'>Create Post</NavLink></Menu.Item>
           <Menu.Item key="3"><NavLink to='/myprofile'>My Profile</NavLink></Menu.Item>
           {/* <Menu.Item key="4"><NavLink to='/login'>Login</NavLink></Menu.Item> */}
         </Menu>
