@@ -6,6 +6,7 @@ import PostList from './PostList'
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import { NavLink } from 'react-router-dom';
+import Auth from '../utils/auth'
 
 
 
@@ -16,6 +17,11 @@ export default function Home() {
   const { loading, data } = useQuery(QUERY_POSTS);
   // console.log(loading)
   const allPosts = data?.allPosts || [];
+  
+/////////////////////////////////////////////////////////////////////////////////
+  const currentUsername= Auth.getUser().data.username || [];
+  console.log(currentUsername)
+/////////////////////////////////////////////////////////////////////////////////
   // console.log(allPosts)
 
   return (
@@ -39,7 +45,8 @@ export default function Home() {
                           (<PostList allPosts={allPosts} />)}
                   </Content>
               </Col>
-
+        
+      
               <Col className="gutter-row" span={6}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)

@@ -7,7 +7,7 @@ import { useMutation } from '@apollo/client';
 
 export default function LikeButton({_id, username }) {
     // console.log(_id)
-    const [favorite, setFavorite] = useState(null)
+    const [favorite, setFavorite] = useState(false)
 
 
 

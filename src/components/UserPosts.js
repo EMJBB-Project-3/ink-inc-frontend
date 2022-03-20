@@ -1,9 +1,11 @@
 import PostCard from "./PostCard.js"
 
-export default function PostList(userPosts) {
+import { useQuery } from '@apollo/client';
+
+export default function UserPosts(userPosts) {
    
-    // console.log(allPosts.allPosts)
-    const postArray = userPosts.userPosts
+//    console.log(userPosts.userPosts.userPosts)
+    const postArray = userPosts.userPosts.userPosts
     // console.log(postArray)
 
     return (
