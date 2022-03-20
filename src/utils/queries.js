@@ -27,6 +27,13 @@ export const QUERY_ONE_USER = gql`
 query user($userId:ID!) {
   user(userId:$userId) {
     username
+    favoritePosts {
+      _id
+      username
+      text
+      artist
+      createdOn
+    }
   }
 }
 `
@@ -42,5 +49,13 @@ query userPosts($username:String!) {
     favorites
   }
 }
+`
 
+export const QUERY_FAVORITE_POSTS = gql`
+query favoritePosts($username:String!) {
+  favoritePosts(username:$username) {
+    favorites
+
+  }
+}
 `

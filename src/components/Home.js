@@ -18,8 +18,8 @@ export default function Home() {
   const allPosts = data?.allPosts || [];
   
 /////////////////////////////////////////////////////////////////////////////////
-  // const currentUsername= Auth.getUser().data.username || [];
-  // console.log(currentUsername)
+  const currentUsername= Auth.getUser().data.username || [];
+  console.log(currentUsername)
 /////////////////////////////////////////////////////////////////////////////////
 
   
@@ -38,12 +38,13 @@ export default function Home() {
       <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
 
     {/* ///////////////////////////////////////////////////////////////////////////////// */}
-      {/* <Welcome currentUsername={currentUsername}></Welcome> */}
+      <Welcome currentUsername={currentUsername}></Welcome>
       {/* /////////////////////////////////////////////////////////////////////////////////   */}
         
         {loading? (<h1>loading...</h1>) 
          :
         (<PostList allPosts={allPosts}/>)}
+        
       </Content>
       
       <Footer style={{ textAlign: 'center' }}>©2022 Styled by EMJBB</Footer>
