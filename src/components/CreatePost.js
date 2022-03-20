@@ -5,8 +5,10 @@ import { NavLink } from 'react-router-dom';
 import { PlusOutlined } from '@ant-design/icons';
 import { Layout, Menu, Form, Input, Button, Upload, Modal } from 'antd';
 
+const { Header, Content, Footer } = Layout;
+
 export default function CreatePost() {
-    
+
 function getBase64(file) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
