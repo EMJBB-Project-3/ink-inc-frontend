@@ -14,6 +14,7 @@ export default function LikeButton({_id, username }) {
     return (
         <>
             <div>
+                <h6>hi</h6>
                 <Button
                 type='primary'
                 className='like-button'
