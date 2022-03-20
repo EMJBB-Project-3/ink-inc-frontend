@@ -30,8 +30,8 @@ export default function Home() {
         </Menu>
         
       </Header>
-      <Divider orientation="left">Responsive</Divider>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+      <Divider orientation="left">Vertical</Divider>
+          <Row gutter={{ xs: 6, sm: 12, md: 24, lg: 48 }}>
               <Col className="gutter-row" span={6}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
