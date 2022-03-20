@@ -39,6 +39,7 @@ const Login = (props) => {
         email: '',
         password: '',
       });
+      window.location.replace('/home')
     };
   
     return (
