@@ -68,7 +68,7 @@ function App() {
               element={<Login/>}
             /> */}
             <Route 
-              path='/CreatePost'
+              path='/createpost'
               element={<CreatePost/>}
             />
           </Routes>
