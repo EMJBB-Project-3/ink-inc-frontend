@@ -1,12 +1,13 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import { Layout, Menu} from 'antd';
+import { Layout, Menu, Upload, Modal} from 'antd';
 import { NavLink } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import PostList from './PostList'
-
 import { Row, Col, Divider } from 'antd';
+
+
 const style = { background: '#0092ff', padding: '8px 0' };
 
 const { Header, Content, Footer } = Layout;
@@ -29,12 +30,12 @@ export default function Home() {
                   <Menu.Item key="4"><NavLink to='/login'>Login</NavLink></Menu.Item>
               </Menu>
           </Header>
-
-
-          <Divider orientation="left">Responsive</Divider>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          
+            
+          <Divider orientation="left">Vertical</Divider>
+          <Row gutter={{ xs: 6, sm: 12, md: 24, lg: 48 }}>
               <Col className="gutter-row" span={6}>
-                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 74 }}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
                           (<PostList allPosts={allPosts} />)}
@@ -42,7 +43,7 @@ export default function Home() {
               </Col>
 
               <Col className="gutter-row" span={6}>
-                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 74 }}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
                           (<PostList allPosts={allPosts} />)}
@@ -50,7 +51,7 @@ export default function Home() {
               </Col>
 
               <Col className="gutter-row" span={6}>
-                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 74 }}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
                           (<PostList allPosts={allPosts} />)}
@@ -58,7 +59,7 @@ export default function Home() {
               </Col>
               
               <Col className="gutter-row" span={6}>
-                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 74 }}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
                           (<PostList allPosts={allPosts} />)}
