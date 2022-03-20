@@ -53,20 +53,20 @@ function App() {
           <Routes>
             <Route 
               path='/' 
-              element={<Home />} 
+              element={<Login />} 
             />
             <Route 
               path='/MyProfile' 
               element={<MyProfile />} 
             />
             <Route 
-              path='/Post'
-              element={<Post />}
+              path='/Home'
+              element={<Home />}
             />
-            <Route 
+            {/* <Route 
               path='/Login'
               element={<Login/>}
-            />
+            /> */}
             <Route 
               path='/CreatePost'
               element={<CreatePost/>}
