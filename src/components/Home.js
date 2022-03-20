@@ -1,6 +1,7 @@
+import React from 'react';
 import 'antd/dist/antd.css';
 import '../styles/Home.css';
-import { Layout, Menu} from 'antd';
+import { Row, Col, Divider, Layout, Menu} from 'antd';
 import PostList from './PostList'
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
@@ -29,12 +30,40 @@ export default function Home() {
         </Menu>
         
       </Header>
-      <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
+      <Divider orientation="left">Responsive</Divider>
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
 
-        {loading? (<h1>loading...</h1>) 
-         :
-        (<PostList allPosts={allPosts}/>)}
-      </Content>
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
+
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
+              
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
+          </Row>
       
       <Footer style={{ textAlign: 'center' }}>©2022 Styled by EMJBB</Footer>
     </Layout>

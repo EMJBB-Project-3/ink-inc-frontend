@@ -22,3 +22,25 @@ query allPosts {
 }
 `;
 
+
+export const QUERY_ONE_USER = gql`
+query user($userId:ID!) {
+  user(userId:$userId) {
+    username
+  }
+}
+`
+
+export const QUERY_USER_POSTS = gql`
+query userPosts($username:String!) {
+  userPosts(username:$username) {
+    _id
+    username
+    text
+    artist
+    createdOn
+    favorites
+  }
+}
+
+`
