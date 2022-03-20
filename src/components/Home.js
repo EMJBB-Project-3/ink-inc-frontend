@@ -1,13 +1,12 @@
+import React from 'react';
 import 'antd/dist/antd.css';
 import '../styles/Home.css';
-import { Layout, Menu} from 'antd';
+import { Row, Col, Divider, Layout, Menu} from 'antd';
 import PostList from './PostList'
-import Welcome from './Welcome'
 import { useQuery } from '@apollo/client';
-import { QUERY_POSTS, QUERY_ONE_USER } from '../utils/queries';
+import { QUERY_POSTS } from '../utils/queries';
 import { NavLink } from 'react-router-dom';
-import { getSuggestedQuery } from '@testing-library/react';
-import Auth from '../utils/auth'
+
 
 
 const { Header, Content, Footer } = Layout;
@@ -15,14 +14,10 @@ const { Header, Content, Footer } = Layout;
 export default function Home() {
 
   const { loading, data } = useQuery(QUERY_POSTS);
+  // console.log(loading)
   const allPosts = data?.allPosts || [];
-  
-/////////////////////////////////////////////////////////////////////////////////
-  // const currentUsername= Auth.getUser().data.username || [];
-  // console.log(currentUsername)
-/////////////////////////////////////////////////////////////////////////////////
+  // console.log(allPosts)
 
-  
   return (
     <Layout>
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
@@ -35,16 +30,40 @@ export default function Home() {
         </Menu>
         
       </Header>
-      <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
+      <Divider orientation="left">Responsive</Divider>
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
 
-    {/* ///////////////////////////////////////////////////////////////////////////////// */}
-      {/* <Welcome currentUsername={currentUsername}></Welcome> */}
-      {/* /////////////////////////////////////////////////////////////////////////////////   */}
-        
-        {loading? (<h1>loading...</h1>) 
-         :
-        (<PostList allPosts={allPosts}/>)}
-      </Content>
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
+
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
+              
+              <Col className="gutter-row" span={6}>
+                  <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
+                      {loading ? (<h1>loading...</h1>)
+                          :
+                          (<PostList allPosts={allPosts} />)}
+                  </Content>
+              </Col>
+          </Row>
       
       <Footer style={{ textAlign: 'center' }}>©2022 Styled by EMJBB</Footer>
     </Layout>
