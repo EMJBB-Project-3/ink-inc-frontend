@@ -17,10 +17,10 @@ export default function Home() {
   const { loading, data } = useQuery(QUERY_POSTS);
   const allPosts = data?.allPosts || [];
   
-
-  const currentUsername= Auth.getUser().data.username || [];
-  console.log(currentUsername)
-  
+/////////////////////////////////////////////////////////////////////////////////
+  // const currentUsername= Auth.getUser().data.username || [];
+  // console.log(currentUsername)
+/////////////////////////////////////////////////////////////////////////////////
 
   
   return (
@@ -36,7 +36,11 @@ export default function Home() {
         
       </Header>
       <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
-      <Welcome currentUsername={currentUsername}></Welcome>
+
+    {/* ///////////////////////////////////////////////////////////////////////////////// */}
+      {/* <Welcome currentUsername={currentUsername}></Welcome> */}
+      {/* /////////////////////////////////////////////////////////////////////////////////   */}
+        
         {loading? (<h1>loading...</h1>) 
          :
         (<PostList allPosts={allPosts}/>)}

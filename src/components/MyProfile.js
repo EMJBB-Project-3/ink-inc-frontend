@@ -15,14 +15,14 @@ export default function MyProfile() {
 
 
   const currentUsername = Auth.getUser().data.username || [];
-  console.log(currentUsername)
+  // console.log(currentUsername)
 
   const { loading, data } = useQuery(QUERY_USER_POSTS, {
     variables: {username:currentUsername}
   });
-  console.log(data)
+  // console.log(data)
   const userPosts = data?.userPosts|| [];
-  console.log(userPosts)
+  // console.log(userPosts)
 
 
   return (
@@ -38,12 +38,12 @@ export default function MyProfile() {
     </Header>
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       
-    {/* {loading? (<h1>loading...</h1>) 
+    {loading? (<h1>loading...</h1>) 
          :
-        (<PostList/>)} */}
+        (<UserPosts userPosts={userPosts}></UserPosts>)}
 
 
-    <UserPosts userPosts={userPosts}></UserPosts>
+    
 
 
 
@@ -84,9 +84,9 @@ export default function MyProfile() {
     </Row>
   </div> */}
       
-      <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+      {/* <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         Content
-      </div>
+      </div> */}
       
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>
