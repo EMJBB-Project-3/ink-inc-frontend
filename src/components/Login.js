@@ -1,6 +1,5 @@
 import 'antd/dist/antd.css';
-import { NavLink } from 'react-router-dom';
-import { Layout, Menu, Card, Col, Row } from 'antd';
+import { Layout, Card, Col, Row } from 'antd';
 import LoginForm from './LoginForm'
 import SignUp from './SignUp'
 
@@ -9,8 +8,8 @@ const { Meta } = Card;
 
 export default function Login() {
     return (
-        <Layout>
-    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+        <Layout>    
+    <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor:"black"}}>
       <div className="logo" />
         {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1"><NavLink to='/'>Home</NavLink></Menu.Item>
@@ -24,18 +23,15 @@ export default function Login() {
                 <div className="site-card-wrapper">
                     <Row gutter={16}>
                         <Col span={8}>
-                            <Card
-                                hoverable
-                                style={{ width: 540, margin:50 }}
-                            >
+                            <Card hoverable style={{ width: 540, margin:50 }}>
                                 <div>
                                     <div>
                                         <h2>Log in</h2>
                                         <LoginForm />
                                     </div>
                                     <div>
-                                    <h2>Sign Up</h2>
-                                    <SignUp />
+                                        <h2>Sign Up</h2>
+                                        <SignUp />
                                     </div>
 
                                 </div>
@@ -50,7 +46,6 @@ export default function Login() {
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>
         </Layout>
-
 
 
     )

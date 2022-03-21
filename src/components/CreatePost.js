@@ -31,7 +31,7 @@ export default function CreatePost() {
         <>
             <div style={{height: '100%', width: '100%'}}>
             <Layout className="layout">
-                <Header style={{ position: 'fixed', zIndex: 1, width: '100%', marginBottom: '100px' }}>
+            <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor:"black"}}>
                     {/* <div className="logo" /> */}
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                         <Menu.Item key="1"><NavLink to='/home'>Home</NavLink></Menu.Item>
