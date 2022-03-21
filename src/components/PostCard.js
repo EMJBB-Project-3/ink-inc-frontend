@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import { Input } from 'antd';
 import { Space, Card } from 'antd';
 // const { TextArea } = Input;
+import '../styles/Post.css'
 
 // export default function PostCard({ username, text }) {
 export default function PostCard(post) {
@@ -11,10 +12,15 @@ export default function PostCard(post) {
     // console.log(_id)
     return (
         <>
-        <Space direction="vertical">
+        <Space 
+        direction="vertical"
+        className='card-container'>
             <Card
                 hoverable
-                style={{ width: 300 }}
+                style={{ 
+                    width: 300, 
+                
+                }}
             >
                 <div>
                 <h3>{username}</h3>

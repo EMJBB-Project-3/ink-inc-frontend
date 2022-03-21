@@ -23,31 +23,7 @@ nav {
     justify-content: space-around;
 }
 
-/* .logo {
-    margin-left: 1rem;
-}
 
-.logo h1 {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: black;
+.menu {
+    background-color: aqua;
 }
-.ul-items {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.ul-items li {
-    margin-right: 3.5rem;
-}
-
-.ul-items li a {
-    color: rgb(12, 59, 100);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.ul-items li a:hover {
-    border-bottom: 3px solid black;
-} */
