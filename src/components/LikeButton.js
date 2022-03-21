@@ -5,22 +5,23 @@ import { useMutation } from '@apollo/client';
 
 
 
-export default function LikeButton({_id, username }) {
+export default function LikeButton({_id, username, favorites }) {
     // console.log(_id)
-    const [favorite, setFavorite] = useState(false)
+    // const [favorite, setFavorite] = useState(false)
 
 
 
     return (
         <>
-            <div>
+            <div style={{display:'flex'}}>
                 <Button
                 type='primary'
                 className='like-button'
                 icon={<HeartOutlined/>}
+                style={{marginRight:'10px'}}
                 ></Button>
-            </div>
-            <div>
+                <p>{favorites}</p>
+
             </div>
         </>
     )
