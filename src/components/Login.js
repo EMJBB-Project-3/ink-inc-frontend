@@ -3,6 +3,7 @@ import { Layout, Card, Col, Row } from 'antd';
 import LoginForm from './LoginForm'
 import SignUp from './SignUp'
 import '../styles/LoginCard.css'
+import '../styles/Header.css'
 
 const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
@@ -11,14 +12,8 @@ export default function Login() {
     return (
         <div className='main'>
         <Layout>
-    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-      <div className="logo" />
-        {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1"><NavLink to='/'>Home</NavLink></Menu.Item>
-          <Menu.Item key="2"><NavLink to='/post'>Post</NavLink></Menu.Item>
-          <Menu.Item key="3"><NavLink to='/myprofile'>My Profile</NavLink></Menu.Item>
-          <Menu.Item key="4"><NavLink to='/login'>Login</NavLink></Menu.Item>
-        </Menu> */}
+    <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+
     </Header>
             <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
 

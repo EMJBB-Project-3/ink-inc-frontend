@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <Layout>
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor:"black"}}>
-        <div className="logo" />
+        {/* <div className="logo" /> */}
         <Menu 
         theme="dark" 
         mode="horizontal" 
