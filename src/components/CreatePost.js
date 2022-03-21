@@ -34,10 +34,10 @@ export default function CreatePost() {
                 <Header style={{ position: 'fixed', zIndex: 1, width: '100%', marginBottom: '100px' }}>
                     {/* <div className="logo" /> */}
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                        <Menu.Item key="1"><NavLink to='/'>Home</NavLink></Menu.Item>
-                        <Menu.Item key="2"><NavLink to='/post'>Post</NavLink></Menu.Item>
+                        <Menu.Item key="1"><NavLink to='/home'>Home</NavLink></Menu.Item>
+                        <Menu.Item key="2"><NavLink to='createpost'>Post</NavLink></Menu.Item>
                         <Menu.Item key="3"><NavLink to='/myprofile'>My Profile</NavLink></Menu.Item>
-                        <Menu.Item key="4"><NavLink to='/login'>Login</NavLink></Menu.Item>
+                        {/* <Menu.Item key="4"><NavLink to='/login'>Login</NavLink></Menu.Item> */}
                     </Menu>
                 </Header>
               <div >  

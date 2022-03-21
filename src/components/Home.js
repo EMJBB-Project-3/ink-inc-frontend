@@ -7,6 +7,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import { NavLink } from 'react-router-dom';
 import Auth from '../utils/auth'
+import '../styles/Home.css'
 
 
 
@@ -26,9 +27,14 @@ export default function Home() {
 
   return (
     <Layout>
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor:"black"}}>
         <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+        <Menu 
+        theme="dark" 
+        mode="horizontal" 
+        activeClassName='menu'
+        // defaultSelectedKeys={['2']} 
+        style= {{backgroundColor: 'black',}}>
           <Menu.Item key="1"><NavLink to='/home'>Home</NavLink></Menu.Item>
           <Menu.Item key="2"><NavLink to='/createpost'>Create Post</NavLink></Menu.Item>
           <Menu.Item key="3"><NavLink to='/myprofile'>My Profile</NavLink></Menu.Item>
@@ -42,9 +48,10 @@ export default function Home() {
         </Menu> */}
         
       </Header>
-      <Divider orientation="left">Vertical</Divider>
-          <Row gutter={{ xs: 6, sm: 12, md: 24, lg: 48 }}>
-              <Col className="gutter-row" span={6}>
+      <Divider orientation="left" >Vertical</Divider>
+          <Row gutter={{md: 24}}
+          justify={'center'}>
+              <Col className="gutter-row" span={7} style={{marginBottom:'30px'}}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
@@ -53,7 +60,7 @@ export default function Home() {
               </Col>
         
       
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" span={7}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
@@ -61,7 +68,7 @@ export default function Home() {
                   </Content>
               </Col>
 
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" span={7}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
@@ -69,7 +76,7 @@ export default function Home() {
                   </Content>
               </Col>
               
-              <Col className="gutter-row" span={6}>
+              <Col className="gutter-row" span={7}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
