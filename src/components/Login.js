@@ -5,22 +5,24 @@ import SignUp from './SignUp'
 import '../styles/LoginCard.css'
 import '../styles/Header.css'
 
+
 const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
 
 export default function Login() {
     return (
-        <div className='main'>
-        <Layout>
-    <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-
-    </Header>
-            <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-
+        <Layout className='container'>
+    {/* <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+    
+    </Header> */}
+            {/* <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}> */}
+            
                 <div className="site-card-wrapper">
-                    <Row gutter={16}>
-                        <Col span={8}>
-                            <Card hoverable style={{ width: 540, margin:50 }}>
+                    {/* <Row gutter={16}>
+                        <Col span={8}> */}
+                            
+                            <Card hoverable style={{ width: 540, margin:50, border:'black solid 5px', position:'fixed'}}>
+                            
                                 <div>
                                     <div>
                                         <h2>Log in</h2>
@@ -32,18 +34,18 @@ export default function Login() {
                                     </div>
 
                                 </div>
-                                <Meta title="Login/SignUp" description="www.ink-inc.global" />
+                                <Meta description="www.ink-inc.global" />
                             </Card>
-                        </Col>
+                        {/* </Col>
 
 
-                    </Row>
+                    </Row> */}
                 </div>
 
-            </Content>
+            {/* </Content> */}
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>
         </Layout>
-        </div>
+        
 
 
     )
