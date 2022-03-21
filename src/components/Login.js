@@ -3,12 +3,15 @@ import { NavLink } from 'react-router-dom';
 import { Layout, Menu, Card, Col, Row } from 'antd';
 import LoginForm from './LoginForm'
 import SignUp from './SignUp'
+import '../styles/LoginCard.css'
 
 const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
 
 export default function Login() {
     return (
+
+        <div className='main'>
         <Layout>
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="logo" />
@@ -50,6 +53,7 @@ export default function Login() {
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>
         </Layout>
+        </div>
 
 
 

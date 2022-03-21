@@ -1,0 +1,12 @@
+.site-card-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 30rem;
+    background: url(../assets/Joker-Tattoo2.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
