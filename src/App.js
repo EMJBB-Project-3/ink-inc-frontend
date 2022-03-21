@@ -7,6 +7,7 @@ import Home from './components/Home'
 import MyProfile from './components/MyProfile'
 import Post from './components/Post'
 import Login from './components/Login'
+import CreatePost from './components/CreatePost'
 
 const url = process.env.NODE_ENV === 'development'
 ? 'graphql': 'https://ink-inc-backend.herokuapp.com/'; 
@@ -52,19 +53,23 @@ function App() {
           <Routes>
             <Route 
               path='/' 
-              element={<Home />} 
+              element={<Login />} 
             />
             <Route 
               path='/MyProfile' 
               element={<MyProfile />} 
             />
             <Route 
-              path='/Post'
-              element={<Post />}
+              path='/Home'
+              element={<Home />}
             />
-            <Route 
+            {/* <Route 
               path='/Login'
               element={<Login/>}
+            /> */}
+            <Route 
+              path='/createpost'
+              element={<CreatePost/>}
             />
           </Routes>
         </>

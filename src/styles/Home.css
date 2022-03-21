@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Duru+Sans&family=Lato:ital,wght@0,300;0,700;1,100&family=Montserrat:wght@200;600&family=Poppins:wght@100;400;500&family=Roboto+Mono&family=Roboto:wght@500;900&family=Rubik:wght@800&display=swap');
 
+
 .header {
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -23,31 +24,23 @@ nav {
     justify-content: space-around;
 }
 
-/* .logo {
-    margin-left: 1rem;
+
+.logo-container {
+    display:flex;
+    height:100%;
+    width:100%;
+    margin-top: 10px;
+    background-color: white;
+    background-size: contain;
 }
 
-.logo h1 {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: black;
+.logo-div {
+    background: url('../assets/PngItem_47269.png');
+     display:flex;
+    height:100%;
+    width:100%;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
-.ul-items {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.ul-items li {
-    margin-right: 3.5rem;
-}
-
-.ul-items li a {
-    color: rgb(12, 59, 100);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.ul-items li a:hover {
-    border-bottom: 3px solid black;
-} */

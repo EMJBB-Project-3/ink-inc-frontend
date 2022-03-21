@@ -1,0 +1,29 @@
+h1 {
+font-family:serif;
+}
+
+.site-card-wrapper {
+    
+    /* width: 100%; */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-inline: 40rem; */
+    /* background: url(../assets/PngItem_47269.png); */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('../assets/PngItem_47269_org.jpg'); */
+    background-image:url('../assets/PngItem_47269_org.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+}
+
+
+.container {
+  display: flex;
+    background-color: white
+}
