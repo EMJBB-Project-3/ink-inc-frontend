@@ -51,7 +51,7 @@ export default function Home() {
       <Divider orientation="left" >Vertical</Divider>
           <Row gutter={{md: 24}}
           justify={'center'}>
-              <Col className="gutter-row" span={7} style={{marginBottom:'30px'}}>
+              <Col className="gutter-row" span={6} style={{marginBottom:'30px'}}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
@@ -60,7 +60,7 @@ export default function Home() {
               </Col>
         
       
-              <Col className="gutter-row" span={7}>
+              <Col className="gutter-row" span={6}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
@@ -68,7 +68,7 @@ export default function Home() {
                   </Content>
               </Col>
 
-              <Col className="gutter-row" span={7}>
+              <Col className="gutter-row" span={6}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :
@@ -76,7 +76,7 @@ export default function Home() {
                   </Content>
               </Col>
               
-              <Col className="gutter-row" span={7}>
+              <Col className="gutter-row" span={6}>
                   <Content className="site-layout" style={{ padding: '50px 50px', marginTop: 75 }}>
                       {loading ? (<h1>loading...</h1>)
                           :

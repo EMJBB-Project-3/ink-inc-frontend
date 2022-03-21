@@ -19,6 +19,8 @@ export default function PostCard(post) {
                 hoverable
                 style={{ 
                     width: 300, 
+                    marginBottom: '30px',
+                    border: 'solid black 3px'
                 
                 }}
             >
@@ -36,8 +38,7 @@ export default function PostCard(post) {
                 </div>
 
                 <div>
-                    <LikeButton _id={_id} username={username}/>
-                    <p>{favorites}</p>
+                    <LikeButton _id={_id} username={username} favorites={favorites}/>
                 </div>
 
 
