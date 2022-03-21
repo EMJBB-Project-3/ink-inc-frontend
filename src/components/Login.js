@@ -2,14 +2,16 @@ import 'antd/dist/antd.css';
 import { Layout, Card, Col, Row } from 'antd';
 import LoginForm from './LoginForm'
 import SignUp from './SignUp'
+import '../styles/LoginCard.css'
 
 const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
 
 export default function Login() {
     return (
-        <Layout>    
-    <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor:"black"}}>
+        <div className='main'>
+        <Layout>
+    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="logo" />
         {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1"><NavLink to='/'>Home</NavLink></Menu.Item>
@@ -46,6 +48,7 @@ export default function Login() {
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2022 Created by EMJBB</Footer>
         </Layout>
+        </div>
 
 
     )
