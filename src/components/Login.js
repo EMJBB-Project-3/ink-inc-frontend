@@ -12,9 +12,9 @@ const { Meta } = Card;
 export default function Login() {
     return (
         <Layout className='container'>
-    {/* <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-    
-    </Header> */}
+    <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor:'black', justifyContent:'center', height:'100px'}}>
+        <h1 style = {{color:'white', fontSize:'50px', marginTop:'20px'}}>Ink inc</h1>
+    </Header>
             {/* <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}> */}
             
                 <div className="site-card-wrapper">
