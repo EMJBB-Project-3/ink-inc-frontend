@@ -15,6 +15,12 @@
 ---
   ## Installation:
   There is no installation needed! All you need to do is click the Heroku link! If you want to have it for yourself, either fork it, or clone it down to your machine!
+
+  link to website: https://inkinc-frontend.herokuapp.com/ ... https://ink-inc-backend.herokuapp.com/
+
+  Github links: https://github.com/EMJBB-Project-3 ... https://github.com/EMJBB-Project-3/ink-inc-frontend ... https://github.com/EMJBB-Project-3/ink-inc-backend
+
+
   ## Usage:
   This project is used for people to explore the wonderful world of Tattoo art! You can share, post, and save your favorite tattoo art! This app is designed for people who like to enjoy their "artsy" side!
   ## Development
